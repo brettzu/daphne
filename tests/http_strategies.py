@@ -31,9 +31,8 @@ def http_path():
 
 def http_body():
     """
-    Returns random binary body data. Super.
+    Returns random binary body data.
     """
-    alphabet = string.ascii_letters + string.digits + "-._~"
     return strategies.binary(min_size=0, max_size=1500)
 
 
