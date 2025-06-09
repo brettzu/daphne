@@ -34,11 +34,11 @@ class TestHTTPResponse(DaphneTestCase):
         response = self.run_daphne_response(
             [
                 {"type": "http.response.start", "status": 200},
-                {"type": "http.response.body", "body": b"hello world"},
+                {"type": "http.response.body", "body": b"hello worlds"},
             ]
         )
         self.assertEqual(response.status, 200)
-        self.assertEqual(response.read(), b"hello world")
+        self.assertEqual(response.read(), b"hello worlds")
 
     def test_status_code_required(self):
         """
